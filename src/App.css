@@ -13,6 +13,7 @@ body {
   color: #ffffff;
   position: relative;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body::before {
@@ -286,6 +287,7 @@ body::before {
   padding-top: 100px;
   position: relative;
   z-index: 1;
+  overflow: visible;
 }
 
 .dashboard-content {
@@ -295,6 +297,7 @@ body::before {
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
+  overflow: visible;
 }
 
 .event-form, .events-list {
@@ -306,6 +309,7 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease;
+  overflow: visible;
 }
 
 @keyframes fadeIn {
