@@ -902,27 +902,6 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 8px;
-}
-
-.events-list-compact::-webkit-scrollbar {
-  width: 6px;
-}
-
-.events-list-compact::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-}
-
-.events-list-compact::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-}
-
-.events-list-compact::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
 }
 
 .event-compact {
@@ -935,6 +914,7 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   min-height: 70px;
+  align-items: center;
 }
 
 .event-compact:hover {
@@ -945,6 +925,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .event-info {
@@ -966,8 +947,8 @@ body::before {
 }
 
 .event-evidence-link {
-  display: inline-block;
-  padding: 6px 12px;
+  display: block;
+  padding: 8px 16px;
   background: rgba(100, 150, 200, 0.15);
   border: 1px solid rgba(100, 150, 200, 0.3);
   border-radius: 8px;
@@ -976,10 +957,7 @@ body::before {
   font-size: 12px;
   transition: all 0.3s ease;
   text-align: center;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  margin: 0 auto;
 }
 
 .event-evidence-link:hover {
