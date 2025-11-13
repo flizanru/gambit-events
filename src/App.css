@@ -375,6 +375,7 @@ body::before {
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
   min-height: 100px;
+  gap: 12px;
 }
 
 .event-item:hover {
@@ -388,6 +389,7 @@ body::before {
   font-size: 15px;
   margin-bottom: 6px;
   font-weight: 600;
+  word-wrap: break-word;
 }
 
 .event-item p {
@@ -400,14 +402,16 @@ body::before {
   color: rgba(100, 150, 200, 1);
   text-decoration: none;
   font-size: 12px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: 6px 12px;
   background: rgba(100, 150, 200, 0.15);
   border-radius: 8px;
   border: 1px solid rgba(100, 150, 200, 0.3);
   transition: all 0.3s ease;
-  word-break: break-all;
-  max-width: 100%;
+  word-break: break-word;
+  max-width: fit-content;
+  white-space: nowrap;
 }
 
 .event-item a:hover {
