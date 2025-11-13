@@ -99,19 +99,21 @@ const Dashboard = () => {
           ) : (
             events.map(event => (
               <div key={event.id} className="event-item">
-                <div style={{ flex: 1 }}>
-                  <h3>{event.eventName}</h3>
-                  <p>{new Date(event.eventDate).toLocaleDateString('ru')}</p>
-                  {event.evidenceLink && (
-                    <a href={event.evidenceLink} target="_blank" rel="noopener noreferrer">
-                      <Link size={14} style={{ marginRight: '6px' }} />
-                      Доказательства
-                    </a>
-                  )}
+                <div className="event-item-header">
+                  <div className="event-item-info">
+                    <h3>{event.eventName}</h3>
+                    <p>{new Date(event.eventDate).toLocaleDateString('ru')}</p>
+                  </div>
+                  <button className="delete-btn" onClick={() => deleteEvent(event.id)}>
+                    ✕
+                  </button>
                 </div>
-                <button className="delete-btn" onClick={() => deleteEvent(event.id)}>
-                  ✕
-                </button>
+                {event.evidenceLink && (
+                  <a href={event.evidenceLink} target="_blank" rel="noopener noreferrer" className="evidence-btn">
+                    <Link size={14} style={{ marginRight: '6px' }} />
+                    Доказательства
+                  </a>
+                )}
               </div>
             ))
           )}
