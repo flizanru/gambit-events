@@ -373,7 +373,7 @@ body::before {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
-  gap: 12px;
+  gap: 14px;
 }
 
 .event-item:hover {
@@ -391,6 +391,7 @@ body::before {
 
 .event-item-info {
   flex: 1;
+  min-width: 0;
 }
 
 .event-item h3 {
@@ -399,6 +400,7 @@ body::before {
   margin-bottom: 6px;
   font-weight: 600;
   word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .event-item p {
@@ -410,23 +412,24 @@ body::before {
 .evidence-btn {
   color: rgba(100, 150, 200, 1);
   text-decoration: none;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
-  background: rgba(100, 150, 200, 0.15);
-  border-radius: 8px;
+  padding: 10px 20px;
+  background: rgba(100, 150, 200, 0.2);
+  border-radius: 10px;
   border: 1px solid rgba(100, 150, 200, 0.3);
   transition: all 0.3s ease;
   white-space: nowrap;
   align-self: center;
-  max-width: 200px;
 }
 
 .evidence-btn:hover {
-  background: rgba(100, 150, 200, 0.25);
+  background: rgba(100, 150, 200, 0.3);
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(100, 150, 200, 0.2);
 }
 
 .delete-btn {
