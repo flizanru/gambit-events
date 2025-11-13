@@ -365,8 +365,7 @@ body::before {
 
 .event-item {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
   padding: 18px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 14px;
@@ -374,7 +373,6 @@ body::before {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
-  min-height: 100px;
   gap: 12px;
 }
 
@@ -382,6 +380,17 @@ body::before {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.event-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.event-item-info {
+  flex: 1;
 }
 
 .event-item h3 {
@@ -395,26 +404,27 @@ body::before {
 .event-item p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
-  margin-bottom: 8px;
+  margin: 0;
 }
 
-.event-item a {
+.evidence-btn {
   color: rgba(100, 150, 200, 1);
   text-decoration: none;
   font-size: 12px;
   display: inline-flex;
   align-items: center;
-  padding: 6px 12px;
+  justify-content: center;
+  padding: 8px 16px;
   background: rgba(100, 150, 200, 0.15);
   border-radius: 8px;
   border: 1px solid rgba(100, 150, 200, 0.3);
   transition: all 0.3s ease;
-  word-break: break-word;
-  max-width: fit-content;
   white-space: nowrap;
+  align-self: center;
+  max-width: 200px;
 }
 
-.event-item a:hover {
+.evidence-btn:hover {
   background: rgba(100, 150, 200, 0.25);
   transform: translateY(-1px);
 }
