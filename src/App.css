@@ -914,7 +914,6 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   min-height: 70px;
-  align-items: center;
 }
 
 .event-compact:hover {
@@ -948,7 +947,7 @@ body::before {
 
 .event-evidence-link {
   display: block;
-  padding: 8px 16px;
+  padding: 6px 12px;
   background: rgba(100, 150, 200, 0.15);
   border: 1px solid rgba(100, 150, 200, 0.3);
   border-radius: 8px;
@@ -957,6 +956,7 @@ body::before {
   font-size: 12px;
   transition: all 0.3s ease;
   text-align: center;
+  width: fit-content;
   margin: 0 auto;
 }
 
